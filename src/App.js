@@ -13,9 +13,8 @@ function App() {
 
   useEffect(() => {
     const fetchWeather = async () => {
-      await getWeather({zip, units}).then((data) => {
+      await getWeather({ zip, units }).then((data) => {
         setWeather(data);
-        console.log(data);
       });
     };
 
@@ -24,15 +23,15 @@ function App() {
 
   return (
     <div className="App">
-      <Cities />
+      <Cities setZip={setZip} />
 
       {weather && (
         <div>
-      <TimeAndScale weather={weather} units={units}/>
-      <Location weather={weather}/>
-      <Today weather={weather} units={units}/>
-      <Forecast weather={weather}/>
-      </div>
+          <TimeAndScale weather={weather} units={units} setUnits={setUnits} />
+          <Location weather={weather} />
+          <Today weather={weather} units={units} />
+          <Forecast days={weather.days} />
+        </div>
       )}
     </div>
   );
