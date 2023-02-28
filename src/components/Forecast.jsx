@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export default ({weather}) => {
   return (
     <section>
       <div className="forecast-header">
