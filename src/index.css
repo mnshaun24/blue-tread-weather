@@ -24,9 +24,6 @@ body {
   background: transparent;
 }
 
-.btn-degree-container {
-}
-
 .btn-degree {
   font-size: 25px;
   font-weight: bold;
@@ -35,18 +32,15 @@ body {
   border: none;
 }
 
-
 .time-scale-container {
   display: flex;
   justify-content: center;
-
 }
 
 .info-time {
   font-size: 5rem;
   text-align: center;
   flex-basis: 70%;
-
 }
 
 .location-container {
